@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Senhas Seguras</h1>
+    </header>
+
+    <main>
+        <section class="gerador-section">
+            <h2>Gerar Nova Senha</h2>
+            <div class="input-grupo">
+                <label for="input-senha">Sua Senha:</label>
+                <input type="text" id="input-senha" readonly>
+                <button id="btn-copiar-senha">Copiar</button>
+            </div>
+
+            <div class="controles-gerador">
+                <div class="opcao-grupo">
+                    <label for="comprimento-senha">Comprimento: <span id="valor-comprimento">12</span></label>
+                    <input type="range" id="comprimento-senha" min="6" max="30" value="12">
+                </div>
+                <div class="opcao-grupo">
+                    <input type="checkbox" id="incluir-maiusculas" checked>
+                    <label for="incluir-maiusculas">Incluir Maiúsculas</label>
+                </div>
+                <div class="opcao-grupo">
+                    <input type="checkbox" id="incluir-numeros" checked>
+                    <label for="incluir-numeros">Incluir Números</label>
+                </div>
+                <div class="opcao-grupo">
+                    <input type="checkbox" id="incluir-simbolos" checked>
+                    <label for="incluir-simbolos">Incluir Símbolos</label>
+                </div>
+                <button id="btn-gerar-senha">Gerar Senha</button>
+            </div>
+            
+            <div class="forca-senha-indicador">
+                <p id="forca-senha">Força da Senha: -</p>
+                <div class="barra-forca-container">
+                    <div id="barra-forca" class="barra-forca"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sobre a Segurança da Senha</h2>
+            <p>A força de uma senha é medida pela sua **entropia**, que indica o quão difícil ela é de ser adivinhada. Quanto maior a entropia (em bits), mais segura sua senha é. Senhas mais longas e com uma variedade maior de caracteres (letras maiúsculas e minúsculas, números e símbolos) aumentam significativamente sua entropia e, consequentemente, sua segurança.</p>
+            <p>Mantenha suas senhas únicas para cada serviço e considere usar um gerenciador de senhas para maior comodidade e segurança.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
